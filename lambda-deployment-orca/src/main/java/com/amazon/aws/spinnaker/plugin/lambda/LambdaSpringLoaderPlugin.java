@@ -54,7 +54,7 @@ public class LambdaSpringLoaderPlugin extends SpringLoaderPlugin {
         List<Pair<String, Class>> beanList =  Arrays.asList(
                 Pair.of("lambdaPluginConfig", Config.class),
                 Pair.of("Aws.LambdaDeploymentStage", LambdaDeploymentStage.class),
-                Pair.of("lambdaCloudDriverUtils", LambdaCloudDriverUtils.class),
+                Pair.of("awsLambdaCloudDriverUtils", LambdaCloudDriverUtils.class),
                 Pair.of("lambdaCreationTask", LambdaCreateTask.class),
                 Pair.of("lambdaUpdateCodeTask", LambdaUpdateCodeTask.class),
                 Pair.of("lambdaUpdateConfigurationTask", LambdaUpdateConfigurationTask.class),

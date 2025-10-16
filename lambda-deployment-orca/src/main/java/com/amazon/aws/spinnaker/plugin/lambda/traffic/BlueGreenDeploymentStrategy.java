@@ -30,6 +30,7 @@ import org.apache.commons.lang3.tuple.Pair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
@@ -41,6 +42,7 @@ public class BlueGreenDeploymentStrategy extends BaseDeploymentStrategy<LambdaBl
     private static final Logger logger = LoggerFactory.getLogger(BlueGreenDeploymentStrategy.class);
 
     @Autowired
+    @Qualifier("awsLambdaCloudDriverUtils")
     private LambdaCloudDriverUtils utils;
 
     @Autowired

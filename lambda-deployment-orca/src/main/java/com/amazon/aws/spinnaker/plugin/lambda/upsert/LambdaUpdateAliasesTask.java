@@ -31,6 +31,7 @@ import org.pf4j.util.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Nullable;
@@ -52,6 +53,7 @@ public class LambdaUpdateAliasesTask implements LambdaStageBaseTask {
     private  String cloudDriverUrl;
 
     @Autowired
+    @Qualifier("awsLambdaCloudDriverUtils")
     private LambdaCloudDriverUtils utils;
 
     @Nonnull

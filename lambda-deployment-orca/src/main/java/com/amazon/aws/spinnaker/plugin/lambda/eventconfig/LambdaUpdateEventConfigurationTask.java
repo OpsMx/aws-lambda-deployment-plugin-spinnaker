@@ -33,6 +33,7 @@ import org.pf4j.util.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Nonnull;
@@ -53,6 +54,7 @@ public class LambdaUpdateEventConfigurationTask implements LambdaStageBaseTask {
     CloudDriverConfigurationProperties props;
 
     @Autowired
+    @Qualifier("awsLambdaCloudDriverUtils")
     LambdaCloudDriverUtils utils;
 
     private static final String DEFAULT_STARTING_POSITION = "LATEST";

@@ -24,6 +24,7 @@ import com.amazon.aws.spinnaker.plugin.lambda.utils.LambdaCloudDriverUtils;
 import com.netflix.spinnaker.orca.api.pipeline.models.StageExecution;
 import com.netflix.spinnaker.orca.clouddriver.config.CloudDriverConfigurationProperties;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
@@ -33,6 +34,7 @@ import java.util.Map;
 public class WeightedDeploymentStrategy extends BaseDeploymentStrategy<LambdaWeightedStrategyInput> {
 
     @Autowired
+    @Qualifier("awsLambdaCloudDriverUtils")
     private LambdaCloudDriverUtils utils;
 
     @Autowired
