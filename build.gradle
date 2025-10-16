@@ -23,4 +23,17 @@ spinnakerBundle {
 subprojects {
   group = "com.amazon.aws.spinnaker.plugin.lambda"
   version = rootProject.version
+
+    if ([korkVersion, orcaVersion, clouddriverVersion].any { it.endsWith("-SNAPSHOT") }) {
+        repositories {
+            mavenLocal()
+            maven{
+                url  "https://nexus1.opsmx.net/repository/maven-snapshots/"
+                credentials {
+                    username = "NEXUS_USERNAME"
+                    password = "NEXUS_PASSWORD"
+                }
+            }
+        }
+    }
 }

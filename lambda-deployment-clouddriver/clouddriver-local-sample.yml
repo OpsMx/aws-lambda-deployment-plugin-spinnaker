@@ -1,6 +1,0 @@
-spinnaker:
-  extensibility:
-    plugins:
-      Aws.LambdaDeploymentPlugin:
-        enabled: true
-        version: 1.2.0
